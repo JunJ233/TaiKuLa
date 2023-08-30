@@ -79,16 +79,19 @@ chart图标文件配置：
 
 ## 3.1.1：不打开浏览器，通过命令行根据所需深度后保存文件功能
 
-![截屏2023-08-30 08.08.20.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5b89a38b-e6b6-4ae0-a031-a659a687bd1f/%E6%88%AA%E5%B1%8F2023-08-30_08.08.20.png)
-
-![截屏2023-08-30 08.08.44.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2c4a9347-e735-4a54-adaf-c34948be3d36/%E6%88%AA%E5%B1%8F2023-08-30_08.08.44.png)
+<img width="595" alt="%E6%88%AA%E5%B1%8F2023-08-30%2008 08 20" src="https://github.com/JunJ233/TaiKuLa/assets/109939759/9a447a34-b326-4385-85c2-2713ae92e464">
+<img width="279" alt="%E6%88%AA%E5%B1%8F2023-08-30%2008 08 44" src="https://github.com/JunJ233/TaiKuLa/assets/109939759/be285aa1-05ca-444e-84d3-1a632ca20ebf">
 
 ## 3.1.2:使用命令行根据所需深度打开浏览器并显示内容：
+<img width="476" alt="%E6%88%AA%E5%B1%8F2023-08-30%2008 10 32" src="https://github.com/JunJ233/TaiKuLa/assets/109939759/f660b141-b473-4a3d-8d6c-33e97a99f275">
+<img width="1245" alt="%E6%88%AA%E5%B1%8F2023-08-30%2008 11 26" src="https://github.com/JunJ233/TaiKuLa/assets/109939759/be4a7f7b-adad-4451-8607-8b8868773935">
 
-![截屏2023-08-30 08.10.32.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/565b198f-2127-4ab4-9421-57184accd9fd/%E6%88%AA%E5%B1%8F2023-08-30_08.10.32.png)
+<img width="1245" alt="%E6%88%AA%E5%B1%8F2023-08-30%2008 11 52" src="https://github.com/JunJ233/TaiKuLa/assets/109939759/902d5036-4d49-46e2-a9b2-965d264764f7">
 
-![截屏2023-08-30 08.11.11.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/4f916488-8ab5-4a06-b07b-b954345adb11/%E6%88%AA%E5%B1%8F2023-08-30_08.11.11.png)
-
-![截屏2023-08-30 08.11.26.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/64566aea-cd87-428a-84e5-70622fb25f3d/%E6%88%AA%E5%B1%8F2023-08-30_08.11.26.png)
 
 ## 3.1.3:通过搜索d3展示细致的依赖关系：
+
+<img width="1245" alt="%E6%88%AA%E5%B1%8F2023-08-30%2008 11 52" src="https://github.com/JunJ233/TaiKuLa/assets/109939759/13049b34-6445-4bdf-8656-f0d3b59dbb5f">
+<img width="1245" alt="%E6%88%AA%E5%B1%8F2023-08-30%2008 12 02" src="https://github.com/JunJ233/TaiKuLa/assets/109939759/4c7e0f24-aa09-4c04-9d01-2efffed31345">
+<img width="1245" alt="%E6%88%AA%E5%B1%8F2023-08-30%2008 12 06" src="https://github.com/JunJ233/TaiKuLa/assets/109939759/0e28f729-56dc-4900-b732-72783050e1c3">
+<img width="1245" alt="%E6%88%AA%E5%B1%8F2023-08-30%2008 12 13" src="https://github.com/JunJ233/TaiKuLa/assets/109939759/b17cfe71-9ebf-465d-a78c-85b59e7b98b8">
