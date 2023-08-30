@@ -23,7 +23,8 @@ GitHub地址：[https://github.com/JunJ233/TaiKuLa/edit/maste](https://github.co
 - 代码质量及改善。
 - 使用eslint规范代码风格
 ## 2.2.2架构图
-<img width="385" alt="截屏2023-08-30 22 21 44" src="https://github.com/JunJ233/TaiKuLa/assets/109939759/231a22cf-c8aa-49ce-8da1-9e02d73e1230">
+
+<img width="752" alt="截屏2023-08-30 23 22 35" src="https://github.com/JunJ233/TaiKuLa/assets/109939759/b8455b1a-b505-427e-9e33-2e98baf4b730">
 
 ## 2.3项目代码介绍
 包代码遍历
