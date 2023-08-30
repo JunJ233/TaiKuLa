@@ -43,15 +43,47 @@ chart图标文件配置：
 
 - commander: 使用commander模块化创建命令行node main.js  generate -d 2 -j b.json。
 
+## 2.3.2目录介绍：
+
+| 目录 | 子目录 | 子子目录 | 子子子目录 | 说明 | 备注 |
+| --- | --- | --- | --- | --- | --- |
+| .eslintrc.js |  |  |  | 初始自动化检查代码规范 |  |
+| index.html |  |  |  | 根目录 |  |
+| main.js |  |  |  | 主要的操作文件js |  |
+| package-lock.json |  |  |  | 所定的package的配置安装json包 |  |
+| package.json |  |  |  | package包配置 |  |
+| vite.config.js |  |  |  | vite的配置 |  |
+| yarn.lock |  |  |  | yarn的配置 |  |
+| b.json |  |  |  | node后形成的依赖文件 |  |
+| public | vite.svg |  |  | svg渲染图文件 |  |
+| src | assets | data | targetFilePath.json | 目标渲染文件 |  |
+| src | assets | logo.png |  | logo的图片 |  |
+| src | components | Charts.vue |  | 依赖渲染的图标文件 | 包含渲染的依赖图 |
+| src | routes | index.js |  | vue渲染的路由文件 | 页面路由的跳转 |
+| src | utils | getChartData.js |  | 获取图标的数据 |  |
+| src | views | DataDisplay.vue |  | 渲染图标的页面 | 包含渲染的依赖图形操作 |
+| src | views | MainViews.vue |  | 主要的搜索页面和展示所有依赖页面 |  |
+| src | App.vue |  |  | 主要挂载vue页面 |  |
+| src | main.js |  |  | 主要的vue的入口 |  |
+| src | style.css |  |  | 主要css的文件配置 |  |
+
 # 3.1功能测试
 
-## 不打开浏览器，通过命令行根据所需深度后保存文件功能
+|        功能项 |      功能需求 |        测试点 |          模块 |          结果  |
+| --- | --- | --- | --- | --- |
+| 搜索模块 | 开发者观察 | 按开发者所需依赖来观察 | 按需搜索依赖观察 | 正常运行 |
+| 深度模块 | 开发者需求 | 支持开发者按所需深度可视化查看依赖 | 按需深度展示依赖 | 正常运行 |
+| 保存模块 | 开发者需求 | 支持开发者根据深度保存下来所需依赖 | 按需深度保存依赖 | 正常运行 |
+| 路由跳转模块 | 页面跳转需求 | 通过按钮实现路由的跳转 | 按需跳转页面关系 | 正常运行 |
+| 依赖展开 | 开发者观察深层依赖 | 支持开发者观察深层的依赖 | 按需观察依赖内部的依赖关系 | 正常运行 |
+
+## 3.1.1：不打开浏览器，通过命令行根据所需深度后保存文件功能
 
 ![截屏2023-08-30 08.08.20.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/5b89a38b-e6b6-4ae0-a031-a659a687bd1f/%E6%88%AA%E5%B1%8F2023-08-30_08.08.20.png)
 
 ![截屏2023-08-30 08.08.44.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/2c4a9347-e735-4a54-adaf-c34948be3d36/%E6%88%AA%E5%B1%8F2023-08-30_08.08.44.png)
 
-## 使用命令行根据所需深度打开浏览器并显示内容：
+## 3.1.2:使用命令行根据所需深度打开浏览器并显示内容：
 
 ![截屏2023-08-30 08.10.32.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/565b198f-2127-4ab4-9421-57184accd9fd/%E6%88%AA%E5%B1%8F2023-08-30_08.10.32.png)
 
@@ -59,14 +91,4 @@ chart图标文件配置：
 
 ![截屏2023-08-30 08.11.26.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/64566aea-cd87-428a-84e5-70622fb25f3d/%E6%88%AA%E5%B1%8F2023-08-30_08.11.26.png)
 
-![截屏2023-08-30 08.11.52.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/8a77cae9-5e0a-4303-9555-1b14308f0bad/%E6%88%AA%E5%B1%8F2023-08-30_08.11.52.png)
-
-![截屏2023-08-30 08.12.02.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aaa65080-509f-48dc-b872-c6b4a38cd140/%E6%88%AA%E5%B1%8F2023-08-30_08.12.02.png)
-
-![截屏2023-08-30 08.12.06.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f2853d11-e503-40e8-af63-43bd59f62552/%E6%88%AA%E5%B1%8F2023-08-30_08.12.06.png)
-
-![截屏2023-08-30 08.12.13.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/ff6db238-ba7b-4c08-8424-3fc5795c2035/%E6%88%AA%E5%B1%8F2023-08-30_08.12.13.png)
-
-# 3.2性能测试
-
-通过按需引入的方式
+## 3.1.3:通过搜索d3展示细致的依赖关系：
