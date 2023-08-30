@@ -16,11 +16,127 @@ GitHub地址：[https://github.com/JunJ233/TaiKuLa/edit/maste](https://github.co
 本项目包含vue3框架+element-plus组件库+vite脚手架作为前端渲染的页面展示，后端数据处理主要使用javascript、d3渲染图库，echart渲染图库在node运行环境运行处理，使用vitest进行深度测试，使用eslint初始代码规范。
 
 ## 2.2.1架构设计
-
+模块级架构：
+使用vue3框架，在框架内部使用模块化的思想布局。有渲染图像模块，element-plus组件模块，遍历文件模块，生成依赖图模块，运行本地服务器模块，保存依赖文件模块，可深度遍历模块
+代码级架构：
+开发流程
+- 代码质量及改善。
+- 使用eslint规范代码风格
 ## 2.2.2架构图
-
+<img width="385" alt="截屏2023-08-30 22 21 44" src="https://github.com/JunJ233/TaiKuLa/assets/109939759/231a22cf-c8aa-49ce-8da1-9e02d73e1230">
 ## 2.3项目代码介绍
+包代码遍历
+const readPackageJson = (pkgPath) => {
+try {
+      const packageJson = fs.readFileSync(pkgPath, 'utf8')
+      return JSON.parse(packageJson)
+    } catch (error) {
+      console.error('Error reading package.json:', error);
+      return null;
+    }
+  };
 
+生成依赖的图像
+const generateDependencyGraph = async (dependencies, graph, visited = new Set(), depthLimit) => {
+    graph = graph || {};
+  
+    for (const dependency in dependencies) {
+      if (!graph[dependency]) {
+        if (visited.has(dependency)) {
+          console.warn(`Circular dependency detected: ${dependency}`);
+          continue;
+        }
+        graph[dependency] = {};
+  
+        if (depthLimit > 0) {
+          const subPackageJsonPath = path.resolve(`node_modules/${dependency}/package.json`);
+          const subPackageDependencies = readPackageJson(subPackageJsonPath)?.dependencies;
+  
+          visited.add(dependency);
+          await generateDependencyGraph(subPackageDependencies, graph[dependency], visited, depthLimit - 1);
+          visited.delete(dependency);
+        }
+      }
+    }
+  
+    return graph;
+  };
+
+保存依赖的图像
+ const saveDependencyGraph = (dependencyGraph, filePath) => {
+    const json = JSON.stringify(dependencyGraph, null, 2);
+    fs.writeFileSync(filePath, json);
+
+  };
+
+运行时的环境
+  function runDev() {
+  return new Promise((resolve, reject) => {
+    const child = spawn('npm', ['run', 'dev'], { stdio: 'inherit' });
+
+    child.on('error', (error) => {
+      reject(error);
+    });
+
+    child.on('close', (code) => {
+      if (code === 0) {
+        resolve();
+      } else {
+        reject(new Error(`npm run dev exited with code ${code}`));
+      }
+    });
+  });
+}
+  
+program
+.command('dependency')
+.description('Generate dependency graph')
+.option('-d, --depth <depth>', 'Set the depth limit', parseInt)
+.action(async ({ depth, output }) => {
+    if (depth <= 0) {
+      console.log('Depth must be greater or equal to 0');
+      return;
+    }
+  
+    const packageJsonPath = path.resolve('./package.json');
+    const packageJson = readPackageJson(packageJsonPath);
+  
+    const dependencyGraph = await generateDependencyGraph(packageJson.dependencies, null, new Set(), depth);
+    // saveDependencyGraph(dependencyGraph, output);
+    const targetFilePath = 'src/assets/data/targetFilePath.json';  // 设置目标文件路径
+    saveDependencyGraph(dependencyGraph, targetFilePath);  // 调用保存函数保存依赖关系图到目标文件
+    runDev()
+  
+  });
+
+
+
+program
+.version('1.0.0')
+.command('generate')
+.description('Generate dependecy json')
+.option('-d, --depth <depth>', 'Set the depth limit', parseInt)
+.option('-j, --json <json>', 'Set the output file path')
+.action(async ({ depth, json }) => {
+  if (depth <= 0) {
+    console.log('Depth must be greater or equal to 0');
+    return;
+  }
+
+  const packageJsonPath = path.resolve('./package.json');
+  const packageJson = readPackageJson(packageJsonPath);
+
+  const dependencyGraph = await generateDependencyGraph(packageJson.dependencies, null, new Set(), depth);
+  saveDependencyGraph(dependencyGraph, json);
+  console.log('Dependency graph saved to file:',json);
+  const targetFilePath = 'src/assets/data/targetFilePath.json';  // 设置目标文件路径
+  saveDependencyGraph(dependencyGraph, targetFilePath);  // 调用保存函数保存依赖关系图到目标文件
+//   runDev()
+
+// eslint-disable-next-line semi
+});
+program.parse(process.argv);
+  
 chart图标文件配置：
 
 在chart.vue文件里，用了d3库里的stratify方法，对seriesDate进行处理，返回一个层次化的数据结构。seriesDate是chart.vue文件里initChart函数的第一个参数。还用了d3库的pack方法对displayRoot进行布局，并将布局结果保存在context.nodes中。
