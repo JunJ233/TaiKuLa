@@ -24,6 +24,7 @@ GitHub地址：[https://github.com/JunJ233/TaiKuLa/edit/maste](https://github.co
 - 使用eslint规范代码风格
 ## 2.2.2架构图
 <img width="385" alt="截屏2023-08-30 22 21 44" src="https://github.com/JunJ233/TaiKuLa/assets/109939759/231a22cf-c8aa-49ce-8da1-9e02d73e1230">
+
 ## 2.3项目代码介绍
 包代码遍历
 const readPackageJson = (pkgPath) => {
@@ -199,7 +200,9 @@ chart图标文件配置：
 <img width="279" alt="%E6%88%AA%E5%B1%8F2023-08-30%2008 08 44" src="https://github.com/JunJ233/TaiKuLa/assets/109939759/be285aa1-05ca-444e-84d3-1a632ca20ebf">
 
 ## 3.1.2:使用命令行根据所需深度打开浏览器并显示内容：
+
 <img width="476" alt="%E6%88%AA%E5%B1%8F2023-08-30%2008 10 32" src="https://github.com/JunJ233/TaiKuLa/assets/109939759/f660b141-b473-4a3d-8d6c-33e97a99f275">
+
 <img width="1245" alt="%E6%88%AA%E5%B1%8F2023-08-30%2008 11 26" src="https://github.com/JunJ233/TaiKuLa/assets/109939759/be4a7f7b-adad-4451-8607-8b8868773935">
 
 <img width="1245" alt="%E6%88%AA%E5%B1%8F2023-08-30%2008 11 52" src="https://github.com/JunJ233/TaiKuLa/assets/109939759/902d5036-4d49-46e2-a9b2-965d264764f7">
