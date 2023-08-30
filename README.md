@@ -90,6 +90,7 @@ chart图标文件配置：
 
 
 ## 3.1.3:通过搜索d3展示细致的依赖关系：
+![3681693382605_ pic](https://github.com/JunJ233/TaiKuLa/assets/109939759/26013a2f-be6d-4a1d-9f70-39953561fc24)
 
 <img width="1245" alt="%E6%88%AA%E5%B1%8F2023-08-30%2008 11 52" src="https://github.com/JunJ233/TaiKuLa/assets/109939759/13049b34-6445-4bdf-8656-f0d3b59dbb5f">
 <img width="1245" alt="%E6%88%AA%E5%B1%8F2023-08-30%2008 12 02" src="https://github.com/JunJ233/TaiKuLa/assets/109939759/4c7e0f24-aa09-4c04-9d01-2efffed31345">
